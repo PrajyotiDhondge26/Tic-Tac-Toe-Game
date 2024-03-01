@@ -28,12 +28,14 @@ boxes.forEach((box)=>{
     box.addEventListener("click",()=>{
        if(turnO){
         box.innerText= "O";
-        box.style.color="red"
+        box.style.color="red";
+        box.style.backgroundColor="white";
         turnO=false;
        }
        else{
         box.innerText= "X";
-        box.style.color="black"
+        box.style.color="white"
+        box.style.backgroundColor="red";
         turnO=true;
        }
        box.disabled= true;
@@ -55,6 +57,7 @@ const enableBoxes= ()=>{
     for(let box of boxes){
         box.disabled= false;
         box.innerText= "";
+        box.style.backgroundColor="#ffffc7";
     }
 }
 const disableBoxes= ()=>{
